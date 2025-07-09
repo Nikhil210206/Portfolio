@@ -132,6 +132,41 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+      {/* Projects Section */}
+      <section className="w-full max-w-3xl">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="bg-zinc-900 rounded-xl p-8 shadow-lg mb-8"
+        >
+          <h2 className="text-2xl font-bold mb-4 text-center">Projects</h2>
+          <div className="flex flex-col gap-6">
+            <div>
+              <h3 className="font-semibold text-lg">Guard AI <span className='text-zinc-400 text-sm'>(Jan 2025 - Mar 2025)</span></h3>
+              <ul className="list-disc list-inside text-zinc-300 ml-4">
+                <li>Developed a real-time AI-based remote proctoring system that ensures secure, fair online assessments. It tracks website activity, detects speaking, and monitors user focus during exams, generating detailed session reports.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">QR Event Check-in <span className='text-zinc-400 text-sm'>(Apr 2025 - May 2025)</span></h3>
+              <ul className="list-disc list-inside text-zinc-300 ml-4">
+                <li>Developed a QR-based event check-in system with backend and frontend application designed to manage college event check-ins using QR codes.</li>
+                <li>Users can register for events, receive a unique QR code, and check in on the event day. Admins can manage events, view attendees, and export attendee data.</li>
+                <li>User Features: register using name, email, student ID, and password. Login with JWT-based authentication.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">Fit You <span className='text-zinc-400 text-sm'>(Oct 2024 - Dec 2024)</span></h3>
+              <ul className="list-disc list-inside text-zinc-300 ml-4">
+                <li>Designed and Developed Fit You which redefines fitness with AI-driven personalized plans for workouts and diets. Empowering fitness journey with technology and expertise; it adapts to your goals and lifestyle.</li>
+                <li>Get meal recommendations tailored to your dietary preferences, including a mix of Indian vegetarian and non-vegetarian options.</li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+      </section>
     </div>
   );
 }
