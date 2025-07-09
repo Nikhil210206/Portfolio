@@ -190,6 +190,24 @@ export default function Home() {
           </ol>
         </motion.div>
       </section>
+      {/* Footer / Contact Section */}
+      <footer className="w-full max-w-3xl mx-auto mt-8 mb-4">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="bg-zinc-900 rounded-xl p-6 shadow-lg flex flex-col items-center gap-2"
+        >
+          <h2 className="text-xl font-bold mb-2">Contact</h2>
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <a href="mailto:nikhilbalamurugan@gmail.com" className="hover:underline text-zinc-300">nikhilbalamurugan@gmail.com</a>
+            <a href="https://www.linkedin.com/in/nikhilb21/" target="_blank" rel="noopener noreferrer" className="hover:underline text-zinc-300">LinkedIn</a>
+            <a href="https://github.com/Nikhil210206" target="_blank" rel="noopener noreferrer" className="hover:underline text-zinc-300">GitHub</a>
+          </div>
+          <p className="text-zinc-500 text-xs mt-2">© {new Date().getFullYear()} Nikhil Balamurugan. All rights reserved.</p>
+        </motion.div>
+      </footer>
     </div>
   );
 }
