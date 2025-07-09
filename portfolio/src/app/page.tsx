@@ -6,6 +6,8 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdBuild } from "react-icons/md";
 import { MdWork } from "react-icons/md";
 import { MdSchool } from "react-icons/md";
+import { MdFolderOpen } from "react-icons/md";
+import { MdEmojiEvents } from "react-icons/md";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -153,34 +155,37 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-      {/* Projects Section */}
-      <section className="w-full max-w-3xl">
+      {/* Projects Section - Card Style */}
+      <section className="w-full max-w-2xl flex justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-zinc-900 rounded-xl p-8 shadow-lg mb-8"
+          className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-10 shadow-2xl mb-12 w-full border border-zinc-700"
         >
-          <h2 className="text-2xl font-bold mb-4 text-center">Projects</h2>
-          <div className="flex flex-col gap-6">
+          <div className="flex items-center gap-3 mb-6">
+            <MdFolderOpen className="text-3xl text-purple-400" />
+            <h2 className="text-3xl font-bold tracking-tight">Projects</h2>
+          </div>
+          <div className="flex flex-col gap-8">
             <div>
-              <h3 className="font-semibold text-lg">Guard AI <span className='text-zinc-400 text-sm'>(Jan 2025 - Mar 2025)</span></h3>
-              <ul className="list-disc list-inside text-zinc-300 ml-4">
+              <h3 className="font-semibold text-lg text-zinc-200">Guard AI <span className='text-zinc-400 text-sm'>(Jan 2025 - Mar 2025)</span></h3>
+              <ul className="list-disc list-inside text-zinc-400 ml-4 mt-1">
                 <li>Developed a real-time AI-based remote proctoring system that ensures secure, fair online assessments. It tracks website activity, detects speaking, and monitors user focus during exams, generating detailed session reports.</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-lg">QR Event Check-in <span className='text-zinc-400 text-sm'>(Apr 2025 - May 2025)</span></h3>
-              <ul className="list-disc list-inside text-zinc-300 ml-4">
+              <h3 className="font-semibold text-lg text-zinc-200">QR Event Check-in <span className='text-zinc-400 text-sm'>(Apr 2025 - May 2025)</span></h3>
+              <ul className="list-disc list-inside text-zinc-400 ml-4 mt-1">
                 <li>Developed a QR-based event check-in system with backend and frontend application designed to manage college event check-ins using QR codes.</li>
                 <li>Users can register for events, receive a unique QR code, and check in on the event day. Admins can manage events, view attendees, and export attendee data.</li>
                 <li>User Features: register using name, email, student ID, and password. Login with JWT-based authentication.</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-lg">Fit You <span className='text-zinc-400 text-sm'>(Oct 2024 - Dec 2024)</span></h3>
-              <ul className="list-disc list-inside text-zinc-300 ml-4">
+              <h3 className="font-semibold text-lg text-zinc-200">Fit You <span className='text-zinc-400 text-sm'>(Oct 2024 - Dec 2024)</span></h3>
+              <ul className="list-disc list-inside text-zinc-400 ml-4 mt-1">
                 <li>Designed and Developed Fit You which redefines fitness with AI-driven personalized plans for workouts and diets. Empowering fitness journey with technology and expertise; it adapts to your goals and lifestyle.</li>
                 <li>Get meal recommendations tailored to your dietary preferences, including a mix of Indian vegetarian and non-vegetarian options.</li>
               </ul>
@@ -188,17 +193,20 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-      {/* Achievements & Certificates Section */}
-      <section className="w-full max-w-3xl">
+      {/* Achievements & Certificates Section - Card Style */}
+      <section className="w-full max-w-2xl flex justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-zinc-900 rounded-xl p-8 shadow-lg mb-8"
+          className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-10 shadow-2xl mb-12 w-full border border-zinc-700"
         >
-          <h2 className="text-2xl font-bold mb-4 text-center">Achievements & Certificates</h2>
-          <ol className="list-decimal list-inside text-zinc-300 space-y-2 ml-4">
+          <div className="flex items-center gap-3 mb-6">
+            <MdEmojiEvents className="text-3xl text-orange-400" />
+            <h2 className="text-3xl font-bold tracking-tight">Achievements & Certificates</h2>
+          </div>
+          <ol className="list-decimal list-inside text-zinc-400 space-y-2 ml-4 text-base">
             <li>Completed NPTEL in Object Oriented Programming with 75% Silver Badge</li>
             <li>Top 25% in Build with India Hackathon By Google</li>
             <li>Top 100 in Social Winter of Code 5.0 open source contribution</li>
