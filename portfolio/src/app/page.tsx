@@ -8,6 +8,7 @@ import { MdWork } from "react-icons/md";
 import { MdSchool } from "react-icons/md";
 import { MdFolderOpen } from "react-icons/md";
 import { MdEmojiEvents } from "react-icons/md";
+import { MdMail } from "react-icons/md";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -219,17 +220,20 @@ export default function Home() {
           </ol>
         </motion.div>
       </section>
-      {/* Footer / Contact Section */}
-      <footer className="w-full max-w-3xl mx-auto mt-8 mb-4">
+      {/* Contact / Footer Section - Card Style */}
+      <footer className="w-full max-w-2xl mx-auto mb-8 flex justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-zinc-900 rounded-xl p-6 shadow-lg flex flex-col items-center gap-2"
+          className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-8 shadow-2xl w-full border border-zinc-700 flex flex-col items-center gap-3"
         >
-          <h2 className="text-xl font-bold mb-2">Contact</h2>
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+          <div className="flex items-center gap-3 mb-2">
+            <MdMail className="text-2xl text-pink-400" />
+            <h2 className="text-2xl font-bold tracking-tight">Contact</h2>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-2">
             <a href="mailto:nikhilbalamurugan@gmail.com" className="hover:underline text-zinc-300">nikhilbalamurugan@gmail.com</a>
             <a href="https://www.linkedin.com/in/nikhilb21/" target="_blank" rel="noopener noreferrer" className="hover:underline text-zinc-300">LinkedIn</a>
             <a href="https://github.com/Nikhil210206" target="_blank" rel="noopener noreferrer" className="hover:underline text-zinc-300">GitHub</a>
