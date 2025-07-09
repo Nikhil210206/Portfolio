@@ -167,6 +167,29 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+      {/* Achievements & Certificates Section */}
+      <section className="w-full max-w-3xl">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="bg-zinc-900 rounded-xl p-8 shadow-lg mb-8"
+        >
+          <h2 className="text-2xl font-bold mb-4 text-center">Achievements & Certificates</h2>
+          <ol className="list-decimal list-inside text-zinc-300 space-y-2 ml-4">
+            <li>Completed NPTEL in Object Oriented Programming with 75% Silver Badge</li>
+            <li>Top 25% in Build with India Hackathon By Google</li>
+            <li>Top 100 in Social Winter of Code 5.0 open source contribution</li>
+            <li>Finalist in IIT Madras Embedded programming challenge</li>
+            <li>Finalist in IIT Madras Shastra Programming contest</li>
+            <li>Finalist in IIT Madras Clash of Codes Contest</li>
+            <li>The only First year team to qualify for the Finals of Quantathon 2.0 24 hours Hackathon.</li>
+            <li>Participated in TechXcelerate BITS Pilani Hyd Hackathon</li>
+            <li>Participated in MOZOHack 6.0 24 Hours Hackathon and got in Top 20 Teams out of 750+ Teams.</li>
+          </ol>
+        </motion.div>
+      </section>
     </div>
   );
 }
