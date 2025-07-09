@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdBuild } from "react-icons/md";
 import { MdWork } from "react-icons/md";
+import { MdSchool } from "react-icons/md";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -127,24 +128,27 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-      {/* Education Section */}
-      <section className="w-full max-w-3xl">
+      {/* Education Section - Card Style */}
+      <section className="w-full max-w-2xl flex justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-zinc-900 rounded-xl p-8 shadow-lg mb-8"
+          className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-10 shadow-2xl mb-12 w-full border border-zinc-700"
         >
-          <h2 className="text-2xl font-bold mb-4 text-center">Education</h2>
-          <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-3 mb-6">
+            <MdSchool className="text-3xl text-yellow-400" />
+            <h2 className="text-3xl font-bold tracking-tight">Education</h2>
+          </div>
+          <div className="flex flex-col gap-6">
             <div>
-              <h3 className="font-semibold text-lg">SRM Institute of Science & Technology, Kattankulathur</h3>
+              <h3 className="font-semibold text-lg text-zinc-200">SRM Institute of Science & Technology, Kattankulathur</h3>
               <div className="flex flex-col sm:flex-row sm:justify-between text-zinc-400 text-sm mb-1">
                 <span>Bachelors of Technology in Computer Science and Engineering</span>
                 <span>Aug 2024 - Present</span>
               </div>
-              <p className="text-zinc-300">CGPA: 9.09</p>
+              <p className="text-zinc-400 mt-1">CGPA: 9.09</p>
             </div>
           </div>
         </motion.div>
