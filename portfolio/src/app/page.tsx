@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
+  const year = new Date().getFullYear();
   return (
     <div className="flex flex-col items-center min-h-screen bg-black text-white px-4">
       {/* Hero Section */}
@@ -205,7 +206,7 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/nikhilb21/" target="_blank" rel="noopener noreferrer" className="hover:underline text-zinc-300">LinkedIn</a>
             <a href="https://github.com/Nikhil210206" target="_blank" rel="noopener noreferrer" className="hover:underline text-zinc-300">GitHub</a>
           </div>
-          <p className="text-zinc-500 text-xs mt-2">© {new Date().getFullYear()} Nikhil Balamurugan. All rights reserved.</p>
+          <p className="text-zinc-500 text-xs mt-2">© {year} Nikhil Balamurugan. All rights reserved.</p>
         </motion.div>
       </footer>
     </div>
