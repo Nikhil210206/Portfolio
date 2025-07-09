@@ -2,40 +2,45 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const year = new Date().getFullYear();
   return (
-    <div className="flex flex-col items-center min-h-screen bg-black text-white px-4">
+    <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-zinc-950 to-zinc-900 text-white px-4">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center min-h-[70vh] w-full">
+      <section className="flex flex-col items-center justify-center min-h-[80vh] w-full">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center gap-6"
+          className="flex flex-col items-center gap-8"
         >
-          <div className="rounded-full overflow-hidden border-4 border-white shadow-lg w-40 h-40">
+          <div className="rounded-full overflow-hidden border-4 border-zinc-800 shadow-2xl w-48 h-48 bg-zinc-900">
             <Image
               src="/nikhil.jpg"
               alt="Nikhil Balamurugan"
-              width={160}
-              height={160}
+              width={192}
+              height={192}
               priority
             />
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-center">Nikhil Balamurugan</h1>
+          <h1 className="text-5xl sm:text-6xl font-extrabold text-center tracking-tight">Nikhil Balamurugan</h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-lg sm:text-xl text-center max-w-2xl"
+            className="text-2xl sm:text-3xl text-center max-w-2xl font-medium text-zinc-300"
           >
-            AI/ML Enthusiast • Open Source Contributor • Hackathon Finalist
+            <span className="inline-block animate-fadein">AI/ML Enthusiast • Open Source Contributor • Hackathon Finalist</span>
           </motion.p>
-          <div className="flex gap-4 mt-2">
-            <a href="https://www.linkedin.com/in/nikhilb21/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
-            <a href="https://github.com/Nikhil210206" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</a>
+          <div className="flex gap-6 mt-2">
+            <a href="https://www.linkedin.com/in/nikhilb21/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors text-3xl">
+              <FaLinkedin />
+            </a>
+            <a href="https://github.com/Nikhil210206" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-400 transition-colors text-3xl">
+              <FaGithub />
+            </a>
           </div>
         </motion.div>
       </section>
