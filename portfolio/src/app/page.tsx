@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdBuild } from "react-icons/md";
+import { MdWork } from "react-icons/md";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -44,72 +46,79 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-      {/* More sections (Skills, Experience, etc.) will be added below */}
-      <section className="w-full max-w-3xl mt-12">
+      {/* Card-style sections will follow below */}
+      {/* Skills Section - Card Style */}
+      <section className="w-full max-w-2xl flex justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-zinc-900 rounded-xl p-8 shadow-lg mb-8"
+          className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-10 shadow-2xl mb-12 w-full border border-zinc-700"
         >
-          <h2 className="text-2xl font-bold mb-4 text-center">Skills</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="flex items-center gap-3 mb-6">
+            <MdBuild className="text-3xl text-blue-400" />
+            <h2 className="text-3xl font-bold tracking-tight">Skills</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
-              <h3 className="font-semibold mb-1">Languages:</h3>
-              <p className="text-zinc-300">Python, C, C++, Java, Typescript, JavaScript, SQL</p>
+              <h3 className="font-semibold mb-2 text-lg text-zinc-200">Languages</h3>
+              <p className="text-zinc-400">Python, C, C++, Java, Typescript, JavaScript, SQL</p>
             </div>
             <div>
-              <h3 className="font-semibold mb-1">Tools/Frameworks:</h3>
-              <p className="text-zinc-300">TensorFlow, PyTorch, OpenCV, Mediapipe, PyAudio, API, React.js, Node.js, Flask, HTML, CSS, Numpy, Generative AI, Git, Github, Ui/UX, Visual Studio, Data Analysis, JSON, Linux, Tailwind</p>
+              <h3 className="font-semibold mb-2 text-lg text-zinc-200">Tools/Frameworks</h3>
+              <p className="text-zinc-400">TensorFlow, PyTorch, OpenCV, Mediapipe, PyAudio, API, React.js, Node.js, Flask, HTML, CSS, Numpy, Generative AI, Git, Github, Ui/UX, Visual Studio, Data Analysis, JSON, Linux, Tailwind</p>
             </div>
             <div>
-              <h3 className="font-semibold mb-1">Technologies:</h3>
-              <p className="text-zinc-300">Data Structures, Algorithms</p>
+              <h3 className="font-semibold mb-2 text-lg text-zinc-200">Technologies</h3>
+              <p className="text-zinc-400">Data Structures, Algorithms</p>
             </div>
             <div>
-              <h3 className="font-semibold mb-1">Soft Skills:</h3>
-              <p className="text-zinc-300">Adaptability, Collaboration, Effective Communication, Time Management</p>
+              <h3 className="font-semibold mb-2 text-lg text-zinc-200">Soft Skills</h3>
+              <p className="text-zinc-400">Adaptability, Collaboration, Effective Communication, Time Management</p>
             </div>
           </div>
         </motion.div>
       </section>
-      {/* Experience Section */}
-      <section className="w-full max-w-3xl">
+      {/* Experience Section - Card Style */}
+      <section className="w-full max-w-2xl flex justify-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="bg-zinc-900 rounded-xl p-8 shadow-lg mb-8"
+          className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-10 shadow-2xl mb-12 w-full border border-zinc-700"
         >
-          <h2 className="text-2xl font-bold mb-4 text-center">Experience</h2>
-          <div className="flex flex-col gap-6">
+          <div className="flex items-center gap-3 mb-6">
+            <MdWork className="text-3xl text-green-400" />
+            <h2 className="text-3xl font-bold tracking-tight">Experience</h2>
+          </div>
+          <div className="flex flex-col gap-8">
             <div>
-              <h3 className="font-semibold text-lg">Google Developers Group on campus SRM</h3>
+              <h3 className="font-semibold text-lg text-zinc-200">Google Developers Group on campus SRM</h3>
               <div className="flex flex-col sm:flex-row sm:justify-between text-zinc-400 text-sm mb-1">
                 <span>Technical Team Member</span>
                 <span>May 2025 - Present</span>
               </div>
-              <p className="text-zinc-300">Developed a QR code scanner for event check-in for managing events.</p>
+              <p className="text-zinc-400 mt-1">Developed a QR code scanner for event check-in for managing events.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-lg">Computer Society of India, SRM</h3>
+              <h3 className="font-semibold text-lg text-zinc-200">Computer Society of India, SRM</h3>
               <div className="flex flex-col sm:flex-row sm:justify-between text-zinc-400 text-sm mb-1">
                 <span>Team Member</span>
                 <span>Feb 2025 - Present</span>
               </div>
             </div>
             <div>
-              <h3 className="font-semibold text-lg">Social Winter of Code 5.0</h3>
+              <h3 className="font-semibold text-lg text-zinc-200">Social Winter of Code 5.0</h3>
               <div className="flex flex-col sm:flex-row sm:justify-between text-zinc-400 text-sm mb-1">
                 <span>Open Source Contributor</span>
                 <span>Jan 2025 - March 2025</span>
               </div>
-              <p className="text-zinc-300">Contributed to real world open source projects and made it to the top 100 contributors.</p>
+              <p className="text-zinc-400 mt-1">Contributed to real world open source projects and made it to the top 100 contributors.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-lg">Aaruush, SRM</h3>
+              <h3 className="font-semibold text-lg text-zinc-200">Aaruush, SRM</h3>
               <div className="flex flex-col sm:flex-row sm:justify-between text-zinc-400 text-sm mb-1">
                 <span>Student Volunteer</span>
                 <span>Aug 2024 - Feb 2025</span>
