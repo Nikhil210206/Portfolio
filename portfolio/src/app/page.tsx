@@ -13,30 +13,37 @@ import { MdMail } from "react-icons/md";
 export default function Home() {
   const year = new Date().getFullYear();
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-zinc-950 to-zinc-900 text-white px-4">
+    <div className="relative flex flex-col items-center min-h-screen w-full overflow-hidden bg-black text-white px-4">
+      {/* Marban-style Hero Background */}
+      <div className="hero-bg">
+        <div className="hero-bg-gradient" />
+        <div className="hero-bg-blur blue" />
+        <div className="hero-bg-blur pink" />
+        <div className="hero-bg-blur purple" />
+      </div>
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center min-h-[80vh] w-full">
+      <section className="flex flex-col items-center justify-center min-h-[90vh] w-full">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center gap-8"
+          className="hero-content flex flex-col items-center gap-8"
         >
-          <div className="rounded-full overflow-hidden border-4 border-zinc-800 shadow-2xl w-48 h-48 bg-zinc-900">
+          <div className="rounded-full overflow-hidden border-4 border-white/10 shadow-2xl w-56 h-56 bg-zinc-900">
             <Image
               src="/nikhil.jpg"
               alt="Nikhil Balamurugan"
-              width={192}
-              height={192}
+              width={224}
+              height={224}
               priority
             />
           </div>
-          <h1 className="text-5xl sm:text-6xl font-extrabold text-center tracking-tight">Nikhil Balamurugan</h1>
+          <h1 className="text-6xl sm:text-7xl font-extrabold text-center tracking-tight leading-tight drop-shadow-xl">Nikhil Balamurugan</h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-2xl sm:text-3xl text-center max-w-2xl font-medium text-zinc-300"
+            className="text-2xl sm:text-3xl text-center max-w-2xl font-medium text-zinc-200 drop-shadow"
           >
             <span className="inline-block animate-fadein">AI/ML Enthusiast • Open Source Contributor • Hackathon Finalist</span>
           </motion.p>
