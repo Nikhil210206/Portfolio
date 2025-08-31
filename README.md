@@ -1,1 +1,1 @@
-My personal portfolio page
+My personal portfolio blog for GeeksforGeeks Technical Task
